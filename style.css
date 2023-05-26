@@ -5,14 +5,14 @@ body {
 header img {
 	position: absolute;
 	left: 40px;
-	top: 80px;
+	top: 50px;
 }
 
 fieldset textarea {
 	position: absolute;
 	display: inline-block;
-	left: 240px;
-	top: 168px;
+	left: 170px;
+	top: 140px;
 	width: 640px;
 	max-height: 300px;
 	font-size: 32px;
@@ -23,6 +23,7 @@ fieldset textarea {
 	color: #0A3871;
 	border-radius: 25px;
 	resize: none;
+	border: 2px solid white;
 }
 
 textarea:hover {
@@ -33,11 +34,15 @@ textarea::placeholder {
   color: #0A3871;
 }
 
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
 .caixa {
 	position: absolute;
-	left: 1000px;
+	left: 900px;
 	width: 400px;
-	height: 944px;
+	height: 600px;
 	margin: 40px;
 }
 
@@ -45,20 +50,20 @@ textarea::placeholder {
 	position: absolute;
 	width: 336px;
 	height: 304px;
-	left: 1070px;
-	top: 283px;
+	left: 970px;
+	top: 100px;
 }
 
 .vetor {
 	position: absolute;
-	top: 850px;
-	left: 240px;
+	top: 520px;
+	left: 200px;
 }
 
 main p {
 	width: 228px;
-	top: 851px;
-	left: 264px;
+	top: 520px;
+	left: 220px;
 	height: 18px;
 	font-family: 'Inter';
 	font-style: normal;
@@ -70,10 +75,18 @@ main p {
 	position: absolute;
 }
 
-h2 {
+div textarea {
 	position: absolute;
-	left: 1070px;
-	top: 619px;
+	width: 336px;
+	height: 304px;
+	left: 970px;
+	top: 100px;
+}
+
+div h2 {
+	position: absolute;
+	left: 970px;
+	top: 420px;
 	width: 336px;
 	height: 58px;
 	font-family: 'Inter';
@@ -87,8 +100,8 @@ h2 {
 
 div p {
 	position: absolute;
-	left: 1070px;
-	top: 693px;
+	left: 970px;
+	top: 480px;
 	width: 336px;
 	height: 48px;
 	font-family: 'Inter';
@@ -100,20 +113,21 @@ div p {
 	color: #495057;
 }
 .botaoAzul{
-	width: 328px;
-	height: 67px;
+	width: 300px;
+	height: 60px;
 	background: #0A3871;
 	color: white;
 	border-radius: 24px;
 	position: absolute;
-	top: 885px;
+	top: 545px;
 	font-family: 'inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
-	left: 240px;
+	left: 180px;
+	border: 2px solid #0A3871;
 }
 
 .botaoAzul:hover {
@@ -128,23 +142,35 @@ div p {
 
 .botaoBranco {
 	margin: 0 20px;
-	width: 328px;
-	height: 67px;
+	width: 300px;
+	height: 59px;
 	border-radius: 24px;
 	color: #0A3871;
 	background: white;
 	position: absolute;
-	top: 885px;
-	left: 580px;
+	top: 545px;
+	left: 490px;
 	font-family: 'inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
+	border: 2px solid white;
 }
 
 div .botaoBranco {
 	left: 1060px;
 	margin: 0px;
+}
+
+footer {
+	padding: 40px 0;
+	text-align: center;
+	top: 600px;
+	position: relative;
+}
+
+footer img {
+	height: 25px;
 }
