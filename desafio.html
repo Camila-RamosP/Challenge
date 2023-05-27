@@ -27,7 +27,7 @@
 			<img class="avatar" src="avatar.png" alt="Homem com lupa">
 			<h2>Nenhuma Mensagem Encontrada</h2>
 			<p>Digite um texto que você deseja criptografar e descriptografar</p>
-			<input class="botaoCopiar" type="submit" value="Copiar">;
+			<input class="botaoCopiar" type="submit" value="Copiar" onclick="javascript:copiarTexto();">
 		</div>
 		<script>
 			const avatar = document.querySelector('.avatar');
@@ -41,7 +41,16 @@
 				if (textoCripto.value) {
 					textoDigitado.value = "";
 				}
-			}			
+			}	
+
+			function copiarTexto() {
+				textoCripto.select();
+				var copiou = document.execCommand('copy');
+
+				if (copiou) {
+					textoCripto.value = "";
+				}
+					}		
 			
 		</script>
 	</main>
