@@ -27,7 +27,7 @@
 			<img class="avatar" src="avatar.png" alt="Homem com lupa">
 			<h2>Nenhuma Mensagem Encontrada</h2>
 			<p>Digite um texto que você deseja criptografar e descriptografar</p>
-
+			<input class="botaoCopiar" type="submit" value="Copiar">;
 		</div>
 		<script>
 			const avatar = document.querySelector('.avatar');
@@ -37,6 +37,10 @@
 			function botaoCriptografar () {			   
 				avatar.style.display = 'none';
 				textoCripto.value = textoDigitado.value; 
+
+				if (textoCripto.value) {
+					textoDigitado.value = "";
+				}
 			}			
 			
 		</script>
