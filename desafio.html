@@ -14,22 +14,33 @@
 	</header>
 
 	<fieldset>
-		<textarea cols="70" rows="1" id="DigitaTexto" placeholder="Digite seu Texto"></textarea>
+		<textarea class="mudaTexto" cols="70" rows="1" id="DigitaTexto" placeholder="Digite seu Texto"></textarea>
 	</fieldset>
 	<main>
 		<img class="vetor" src="vetor.png">
 		<p>Apenas letras minúsculas e sem acento.</p>
-		<input class="botaoAzul" type="submit" value="Criptografar" class="enviar">
-		<input class="botaoBranco" type="submit" value="Descriptografar" class="enviar">
+		<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar();">
+		<input class="botaoBranco" type="submit" value="Descriptografar">
 		<div>
 			<img class="caixa" src="retangulo.png">
-			<textarea class="mensagem" cols="40" rows="10" id="DigitaTexto"></textarea>
+			<textarea class="mensagem" cols="40" rows="10" id="DTexto"></textarea>
 			<img class="avatar" src="avatar.png" alt="Homem com lupa">
 			<h2>Nenhuma Mensagem Encontrada</h2>
 			<p>Digite um texto que você deseja criptografar e descriptografar</p>
-		</div>
 
+		</div>
+		<script>
+			const avatar = document.querySelector('.avatar');
+			const textoDigitado = document.querySelector('.mudaTexto');
+			const textoCripto = document.querySelector('.mensagem');
+
+			function botaoCriptografar () {			   
+				avatar.style.display = 'none';
+			}			
+			
+		</script>
 	</main>
+
 	<footer>
 		<a href="https://www.linkedin.com/in/camila-ramos-adm/"><img src="linkedin.png" alt="logo linkedin"></a>
 		<a href="https://github.com/Camila-RamosP"><img src="github.png" alt="logo github"></a>
