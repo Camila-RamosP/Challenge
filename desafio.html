@@ -19,27 +19,31 @@
 	<main>
 		<img class="vetor" src="vetor.png">
 		<p>Apenas letras minúsculas e sem acento.</p>
-		<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar();">
+		<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar()">
 		<input class="botaoBranco" type="submit" value="Descriptografar">
 		<div>
 			<img class="caixa" src="retangulo.png">
 			<textarea class="mensagem" cols="40" rows="10" id="DTexto"></textarea>
 			<img class="avatar" src="avatar.png" alt="Homem com lupa">
-			<h2>Nenhuma Mensagem Encontrada</h2>
-			<p>Digite um texto que você deseja criptografar e descriptografar</p>
-			<input class="botaoCopiar" type="submit" value="Copiar" onclick="javascript:copiarTexto();">
+			<h2 class="apagar">Nenhuma Mensagem Encontrada</h2>
+			<p class="frase">Digite um texto que você deseja criptografar e descriptografar</p>
+			<input class="botaoCopiar" type="submit" value="Copiar" onclick="copiarTexto()">
 		</div>
 		<script>
 			const avatar = document.querySelector('.avatar');
 			const textoDigitado = document.querySelector('.mudaTexto');
 			const textoCripto = document.querySelector('.mensagem');
+			const apagarMensagem = document.querySelector('.apagar');
+			const apagarMensagem1 = document.querySelector('.frase');
 
-			function botaoCriptografar () {			   
+			function botaoCriptografar() {			   
 				avatar.style.display = 'none';
-				textoCripto.value = textoDigitado.value; 
-
+				cripto();
+				
 				if (textoCripto.value) {
 					textoDigitado.value = "";
+					apagarMensagem.style.display = 'none';
+					apagarMensagem1.style.display = 'none';
 				}
 			}	
 
@@ -50,12 +54,21 @@
 				if (copiou) {
 					textoCripto.value = "";
 				}
-					}		
-			
-		</script>
-	</main>
+			}
+				
+			function cripto() {
+					const texto = textoDigitado.value;
+					var codificador = texto.replace(/e/g,'enter').replace(/i/,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
+					textoCripto.value = codificador;
+					
+					
+				}	
 
-	<footer>
+			
+				
+				</script>
+
+		<footer>
 		<a href="https://www.linkedin.com/in/camila-ramos-adm/"><img src="linkedin.png" alt="logo linkedin"></a>
 		<a href="https://github.com/Camila-RamosP"><img src="github.png" alt="logo github"></a>
 		<p>Criado por Camila Ramos</p>
