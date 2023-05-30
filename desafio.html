@@ -20,7 +20,7 @@
 		<img class="vetor" src="vetor.png">
 		<p>Apenas letras minúsculas e sem acento.</p>
 		<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar()">
-		<input class="botaoBranco" type="submit" value="Descriptografar">
+		<input class="botaoBranco" type="submit" value="Descriptografar" onclick="javascript:botaoDescriptografar()">
 		<div>
 			<img class="caixa" src="retangulo.png">
 			<textarea class="mensagem" cols="40" rows="10" id="DTexto"></textarea>
@@ -63,8 +63,33 @@
 					
 					
 				}	
+			function cripto() {
+					const texto = textoDigitado.value;
+					var codificador = texto.replace(/e/g,'enter').replace(/i/,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
+					textoCripto.value = codificador;
+					
+					
+				}
 
-			
+			function descripto() {
+					const textoDescripto = textoDigitado.value;
+					var decodificador = textoDescripto.replace(/enter/g,'e').replace(/imes/,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
+					textoCripto.value = decodificador;
+					
+					
+				}
+
+			function botaoDescriptografar() {			   
+				descripto();
+				
+				if (textoCripto.value) {
+					textoDigitado.value = "";
+					apagarMensagem.style.display = 'none';
+					apagarMensagem1.style.display = 'none';
+				}
+			}	
+
+
 				
 				</script>
 
