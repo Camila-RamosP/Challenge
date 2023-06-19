@@ -5,12 +5,10 @@ body {
 }
 
 header img {
-
 	margin-top: 2.5rem;
 }
 
 #DigitaTexto {
-
 	margin: 0 auto;
 	margin-top: 3rem;
 	margin-bottom: 20rem;
@@ -24,7 +22,6 @@ header img {
 	border-radius: 25px;
 	resize: none;
 	border: 2px solid white;
-
 }
 
 textarea:hover {
@@ -52,15 +49,12 @@ textarea:focus::-webkit-input-placeholder {
 	background: #0A3871;
 	color: white;
 	border-radius: 24px;
-
-
 	font-family: 'inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
-
 	border: 2px solid #0A3871;
 }
 
@@ -70,17 +64,15 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .botaoBranco:hover, .botaoCopiar:hover {
-	scale: 110%;
+	scale: 105%;
 	font-weight: bold;
 }
 
 .botaoBranco {
-
 	height: 59px;
 	border-radius: 24px;
 	color: #0A3871;
 	background: white;
-
 	font-family: 'inter';
 	font-style: normal;
 	font-weight: 400;
@@ -111,6 +103,7 @@ textarea:focus::-webkit-input-placeholder {
 	display: none;
 	width: 100%;
 	border: 1px solid #0A3871;
+	margin-top: 1.5rem;
 }
 
 .conteudo-principal {
@@ -132,18 +125,16 @@ textarea:focus::-webkit-input-placeholder {
 	display: none;
 	width: 10rem;
 	height: 304px;
-
 }
 
 .descripto {
 	position: relative;
+	margin-bottom: 1rem;
 }
 
 div textarea {
-
 	width: 15.5rem;
 	min-height: 10rem;
-	margin-bottom: 2rem;
 	color: #0A3871;
 	font-size: 25px;
 	font-style: normal;
@@ -193,19 +184,52 @@ footer {
 }
 
 footer img {
-	height: 1rem;
+	width: 20%;
 	margin-bottom: .5rem;
 }
 
 /*Para mobile*/
 
-@media screen and (max-width:480px){
-	textarea, .caixa {
-		
+@media screen and (min-width:768px){
+	.conteudo-principal, #DigitaTexto, .mensagem, .caixa {
+		width: 100%;
 	} 
-	.botaoBranco, .botaoAzul, .botaoCopiar {
 
+	.aviso {
+		text-align: left;
+		padding-left: 20px;
+	}
 
-		
+	.botao {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.botaoBranco, .botaoAzul {
+		width: 50%;
+		margin: 0 10px;
+	}
+
+	.descripto {
+		margin-bottom: .5rem;
+	}
+
+	.botaoCopiar {
+		background-color: white;
+		color: #0A3871;
+		margin-bottom: 1rem;
+	}
+
+	.mensagem-descripto {
+		top: 3rem;
+		left: 6rem;
+	}
+
+	footer img {
+		width: 10%;
+	}
+
+	.nome {
+		margin: .5rem auto;
 	}
 }
