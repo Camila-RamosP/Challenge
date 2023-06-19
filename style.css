@@ -1,21 +1,21 @@
 body {
-	background: linear-gradient(#fefefe,#0A3871)fixed;
+	background: linear-gradient(#fefefe,#0A3871);
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 header img {
-	position: absolute;
-	left: 40px;
-	top: 50px;
+
+	margin-top: 2.5rem;
 }
 
-fieldset textarea {
-	position: absolute;
-	display: inline-block;
-	left: 170px;
-	top: 140px;
-	width: 640px;
-	max-height: 300px;
-	font-size: 32px;
+#DigitaTexto {
+
+	margin: 0 auto;
+	margin-top: 3rem;
+	margin-bottom: 20rem;
+	width: 15rem;
+	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 150%;
@@ -24,10 +24,12 @@ fieldset textarea {
 	border-radius: 25px;
 	resize: none;
 	border: 2px solid white;
+
 }
 
 textarea:hover {
 	border: 2px solid #0A3871;
+	color: #0A3871;
 }
 
 textarea::placeholder {
@@ -38,103 +40,27 @@ textarea:focus::-webkit-input-placeholder {
 	color: transparent;
 }
 
-.caixa {
-	position: absolute;
-	left: 900px;
-	width: 400px;
-	height: 600px;
-	margin: 40px;
+.botao {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
 }
 
-.avatar {
-	position: absolute;
-	width: 336px;
-	height: 304px;
-	left: 970px;
-	top: 100px;
-}
-
-.vetor {
-	position: absolute;
-	top: 520px;
-	left: 200px;
-}
-
-main p {
-	width: 228px;
-	top: 520px;
-	left: 220px;
-	height: 18px;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 150%;
-	color: white;
-	opacity: 0.8;
-	position: absolute;
-}
-
-div textarea {
-	position: absolute;
-	width: 336px;
-	height: 304px;
-	left: 970px;
-	top: 100px;
-	color: #0A3871;
-	font-size: 25px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 150%;
-	font-family: 'inter';
-	border-radius: 25px;
-	border: none;
-}
-
-div h2 {
-	position: absolute;
-	left: 970px;
-	top: 420px;
-	width: 336px;
-	height: 58px;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 120%;
-	text-align: center;
-	color: #343A40;
-}
-
-div p {
-	position: absolute;
-	left: 970px;
-	top: 480px;
-	width: 336px;
-	height: 48px;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 150%;
-	text-align: center;
-	color: #495057;
-}
-.botaoAzul, .botaoCopiar{
-	width: 300px;
+.botaoAzul, .botaoCopiar {
+	margin-bottom: 1rem;	
 	height: 60px;
 	background: #0A3871;
 	color: white;
 	border-radius: 24px;
-	position: absolute;
-	top: 545px;
+
+
 	font-family: 'inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
-	left: 180px;
+
 	border: 2px solid #0A3871;
 }
 
@@ -149,15 +75,12 @@ div p {
 }
 
 .botaoBranco {
-	margin: 0 20px;
-	width: 300px;
+
 	height: 59px;
 	border-radius: 24px;
 	color: #0A3871;
 	background: white;
-	position: absolute;
-	top: 545px;
-	left: 490px;
+
 	font-family: 'inter';
 	font-style: normal;
 	font-weight: 400;
@@ -167,28 +90,122 @@ div p {
 	border: 2px solid white;
 }
 
+.vetor {
+	filter: invert(70%);
+	background-image: url(../challenge/vetor.png);
+	background-repeat: no-repeat;
+}
+
+.aviso {
+	margin-bottom: .5rem;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: .8rem;
+	line-height: 150%;
+	color: white;
+	text-align: center;
+}
+
 .botaoCopiar {
-	left: 990px;
+	display: none;
+	width: 100%;
 	border: 1px solid #0A3871;
 }
 
-div .botaoBranco {
-	left: 1060px;
-	margin: 0px;
+.conteudo-principal {
+	margin: 0 auto;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
 }
 
-footer {
-	padding: 40px 0;
-	text-align: center;
-	top: 600px;
+.caixa {
+	display: none;
+	margin-right: 2.5rem;
+	width: 10rem;
+	height: 600px;
+	margin: 40px;
+}
+
+.avatar {
+	display: none;
+	width: 10rem;
+	height: 304px;
+
+}
+
+.descripto {
 	position: relative;
 }
 
-footer img {
-	height: 25px;
+div textarea {
+
+	width: 15.5rem;
+	min-height: 10rem;
+	margin-bottom: 2rem;
+	color: #0A3871;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	font-family: 'inter';
+	border-radius: 25px;
+	border: none;
 }
 
-footer p {
-	top: 80px;
-	left: 560px;
+.aviso-mensagem {
+	margin-bottom: .5rem;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+	text-align: center;
+	color: #343A40;
+}
+
+.mensagem-descripto {
+	position: absolute;
+	top: 23px;
+	left: .5px;
+	padding: 0 1rem;
+}
+
+.frase {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	text-align: center;
+	color: #495057;
+}
+
+.nome {
+	margin: 0 auto;
+}
+
+footer {
+	text-align: center;
+	color: white;
+	margin-bottom: 2rem;
+}
+
+footer img {
+	height: 1rem;
+	margin-bottom: .5rem;
+}
+
+/*Para mobile*/
+
+@media screen and (max-width:480px){
+	textarea, .caixa {
+		
+	} 
+	.botaoBranco, .botaoAzul, .botaoCopiar {
+
+
+		
+	}
 }

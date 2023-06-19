@@ -12,30 +12,30 @@
 	<header>
 		<img src="logo_alura.png" alt="Logo Escola Alura">
 	</header>
-
-	<fieldset>
-		<textarea class="mudaTexto" cols="70" rows="1" id="DigitaTexto" placeholder="Digite seu Texto"></textarea>
-	</fieldset>
-	<main>
-		<img class="vetor" src="vetor.png">
-		<p>Apenas letras minúsculas e sem acento.</p>
-		<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar()">
-		<input class="botaoBranco" type="submit" value="Descriptografar" onclick="javascript:botaoDescriptografar()">
-		<div>
+	<main class="conteudo-principal">
+		<textarea class="mudaTexto" cols="70" rows="1" id="DigitaTexto" oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1' placeholder="Digite seu Texto"></textarea>
+		<div class="botao">
+			<p class="aviso vetor">Apenas letras minúsculas e sem acento.</p>
+			<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar()">
+			<input class="botaoBranco" type="submit" value="Descriptografar" onclick="javascript:botaoDescriptografar()">
+		</div>
+		<div class="descripto">
 			<img class="caixa" src="retangulo.png">
-			<textarea class="mensagem" cols="40" rows="10" id="DTexto"></textarea>
+			<textarea class="mensagem" cols='70' rows="1" oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1' id="DTexto"></textarea>
 			<img class="avatar" src="avatar.png" alt="Homem com lupa">
-			<h2 class="apagar">Nenhuma Mensagem Encontrada</h2>
-			<p class="frase">Digite um texto que você deseja criptografar e descriptografar</p>
+			<div class="mensagem-descripto">
+				<h2 class="aviso-mensagem">Nenhuma Mensagem Encontrada</h2>
+				<p class="frase">Digite um texto que você deseja criptografar e descriptografar</p>
+			</div>
 			<input class="botaoCopiar" type="submit" value="Copiar" onclick="copiarTexto()">
 		</div>
 		<script>
 			const avatar = document.querySelector('.avatar');
-			const textoDigitado = document.querySelector('.mudaTexto');
+			var textoDigitado = document.querySelector('.mudaTexto');
+			const botaoCopiar = document.querySelector('.botaoCopiar');
 			const textoCripto = document.querySelector('.mensagem');
-			const apagarMensagem = document.querySelector('.apagar');
-			const apagarMensagem1 = document.querySelector('.frase');
-
+			const apagarMensagem = document.querySelector('.mensagem-descripto');
+			
 			function botaoCriptografar() {			   
 				avatar.style.display = 'none';
 				cripto();
@@ -43,7 +43,8 @@
 				if (textoCripto.value) {
 					textoDigitado.value = "";
 					apagarMensagem.style.display = 'none';
-					apagarMensagem1.style.display = 'none';
+					botaoCopiar.style.display = 'block'
+
 				}
 			}	
 
@@ -55,28 +56,19 @@
 					textoCripto.value = "";
 				}
 			}
-				
-			function cripto() {
-					const texto = textoDigitado.value;
-					var codificador = texto.replace(/e/g,'enter').replace(/i/,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
-					textoCripto.value = codificador;
+			
+			function cripto(encriptado) {
 					
-					
-				}	
-			function cripto() {
-					const texto = textoDigitado.value;
-					var codificador = texto.replace(/e/g,'enter').replace(/i/,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
-					textoCripto.value = codificador;
-					
-					
+					var encriptado = textoDigitado.value;
+					encriptado = encriptado.toLowerCase();
+					var codificador = encriptado.replace(/e/g,'enter').replace(/i/,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
+					textoCripto.value = codificador;		
 				}
 
 			function descripto() {
 					const textoDescripto = textoDigitado.value;
 					var decodificador = textoDescripto.replace(/enter/g,'e').replace(/imes/,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
-					textoCripto.value = decodificador;
-					
-					
+					textoCripto.value = decodificador;		
 				}
 
 			function botaoDescriptografar() {			   
@@ -85,18 +77,14 @@
 				if (textoCripto.value) {
 					textoDigitado.value = "";
 					apagarMensagem.style.display = 'none';
-					apagarMensagem1.style.display = 'none';
 				}
-			}	
-
-
-				
-				</script>
+			}			
+		</script>
 
 		<footer>
 		<a href="https://www.linkedin.com/in/camila-ramos-adm/"><img src="linkedin.png" alt="logo linkedin"></a>
 		<a href="https://github.com/Camila-RamosP"><img src="github.png" alt="logo github"></a>
-		<p>Criado por Camila Ramos</p>
+		<p class="nome">Criado por Camila Ramos</p>
 	</footer>
 </body>
 </html>
