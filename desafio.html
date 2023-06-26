@@ -3,26 +3,30 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<title>Decodificador</title>
 </head>
 <body>
 	<header>
 		<img src="logo_alura.png" alt="Logo Escola Alura">
 	</header>
-	<main class="conteudo-principal">
-		<textarea class="mudaTexto" cols="70" rows="1" id="DigitaTexto" oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1' placeholder="Digite seu Texto"></textarea>
-		<p class="aviso vetor">Apenas letras minúsculas e sem acento.</p>
-		<div class="botao">
-			<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar()">
-			<input class="botaoBranco" type="submit" value="Descriptografar" onclick="javascript:botaoDescriptografar()">
-		</div>
-		<div class="descripto">
-			<img class="caixa" src="retangulo.png">
-			<textarea class="mensagem" cols='70' rows="1" oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1' id="DTexto"></textarea>
-			<img class="avatar" src="avatar.png" alt="Homem com lupa">
+	<main>
+		<section class="conteudo-principal">
+			<div class="cripto">
+				<textarea class="mudaTexto" cols="70" rows="1" id="DigitaTexto" oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1' placeholder="Digite seu Texto"></textarea>
+				<div class="botao">	
+					<p class="aviso vetor">Apenas letras minúsculas e sem acento.</p>
+					<input class="botaoAzul" type="button" value="Criptografar" onclick="javascript:botaoCriptografar()">
+					<input class="botaoBranco" type="submit" value="Descriptografar" onclick="javascript:botaoDescriptografar()">
+				</div>	
+			</div>
+			<div class="descripto">
+				<img class="caixa" src="retangulo.png">
+				<textarea class="mensagem" cols='70' rows="1" oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1' id="DTexto"></textarea>
+				<img class="avatar" src="avatar.png" alt="Homem com lupa">
 			<div class="mensagem-descripto">
 				<h2 class="aviso-mensagem">Nenhuma Mensagem Encontrada</h2>
 				<p class="frase">Digite um texto que você deseja criptografar e descriptografar</p>
@@ -58,7 +62,6 @@
 			}
 			
 			function cripto(encriptado) {
-					
 					var encriptado = textoDigitado.value;
 					encriptado = encriptado.toLowerCase();
 					var codificador = encriptado.replace(/e/g,'enter').replace(/i/,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
@@ -80,7 +83,7 @@
 				}
 			}			
 		</script>
-
+		</section>
 		<footer>
 		<a class="icone" href="https://www.linkedin.com/in/camila-ramos-adm/"><img src="linkedin.png" alt="logo linkedin"></a>
 		<a class="icone" href="https://github.com/Camila-RamosP"><img src="github.png" alt="logo github"></a>

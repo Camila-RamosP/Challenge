@@ -2,6 +2,7 @@ body {
 	background: linear-gradient(#fefefe,#0A3871);
 	padding-left: 10%;
 	padding-right: 10%;
+	font-family: 'Inter', sans-serif;
 }
 
 header img {
@@ -9,10 +10,9 @@ header img {
 }
 
 #DigitaTexto {
-	margin: 0 auto;
 	margin-top: 3rem;
-	margin-bottom: 20rem;
-	width: 15rem;
+	min-height: auto;
+	width: 100%;
 	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: 400;
@@ -22,6 +22,7 @@ header img {
 	border-radius: 25px;
 	resize: none;
 	border: 2px solid white;
+	max-width: 700px;
 }
 
 textarea:hover {
@@ -93,10 +94,11 @@ textarea:focus::-webkit-input-placeholder {
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
-	font-size: .8rem;
+	font-size: .7rem;
 	line-height: 150%;
 	color: white;
 	text-align: center;
+	margin-left: 1px;
 }
 
 .botaoCopiar {
@@ -113,12 +115,18 @@ textarea:focus::-webkit-input-placeholder {
 	flex-direction: column;
 }
 
+.cripto {
+	display: flex;
+	flex-direction: column;
+	height: 600px;
+	justify-content: space-between;
+}
+
 .caixa {
 	display: none;
-	margin-right: 2.5rem;
 	width: 10rem;
 	height: 600px;
-	margin: 40px;
+	margin-top: 3rem;
 }
 
 .avatar {
@@ -132,7 +140,7 @@ textarea:focus::-webkit-input-placeholder {
 	margin-bottom: 1rem;
 }
 
-div textarea {
+.mensagem {
 	width: 15.5rem;
 	min-height: 10rem;
 	color: #0A3871;
@@ -150,7 +158,7 @@ div textarea {
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 1.3rem;
 	line-height: 120%;
 	text-align: center;
 	color: #343A40;
@@ -175,6 +183,8 @@ div textarea {
 
 .nome {
 	margin: 0 auto;
+	font-weight: 400;
+	font-size: .8rem;
 }
 
 footer {
@@ -184,7 +194,7 @@ footer {
 }
 
 footer img {
-	width: 20%;
+	width: 15%;
 	margin-bottom: .5rem;
 }
 
@@ -198,15 +208,18 @@ footer img {
 	.aviso {
 		text-align: left;
 		padding-left: 20px;
+		margin-left: 1rem;
+		width: 100%;
 	}
 
 	.botao {
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
 	.botaoBranco, .botaoAzul {
-		width: 50%;
+		width: 45%;
 		margin: 0 10px;
 	}
 
@@ -222,14 +235,70 @@ footer img {
 
 	.mensagem-descripto {
 		top: 3rem;
-		left: 6rem;
+		left: 3.5rem;
 	}
 
 	footer img {
-		width: 10%;
+		width: 5%;
 	}
 
 	.nome {
 		margin: .5rem auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.conteudo-principal {
+		flex-direction: row;
+	}
+
+	#DigitaTexto {
+		width: 90%;
+	}
+
+	.botaoCopiar {
+		position: absolute;
+		top: 80%;
+		left: 10%;
+		width: 80%;
+	}
+
+	.cripto {
+		height: auto;
+	}
+
+	.descripto {
+		width: 90%;
+		display: flex;
+		align-items: center;
+	}
+
+	.mensagem {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		width: 80%;
+		transform: translate(-50%, -50%);
+	}
+
+	.caixa {
+		display: block;
+	}
+
+	.avatar {
+		display: block;
+		width: 65%;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.mensagem-descripto {
+		top: 75%;
+		padding: 0 2.5rem;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
 	}
 }
